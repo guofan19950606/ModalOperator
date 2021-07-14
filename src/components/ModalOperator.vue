@@ -63,6 +63,7 @@ export default {
          submitLoading: true,
     }
   },
+  inject: ['operator'],
   props: {
     isHeaderShow:{
       type:Boolean,

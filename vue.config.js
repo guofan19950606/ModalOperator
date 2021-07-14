@@ -1,14 +1,6 @@
 module.exports = {
-  configureWebpack: {
-    externals: {
-      axios: 'axios',
-      lodash: '_',
-      'view-design': 'iview',
-      '@centit/api-core': 'apiCore',
-      '@centit/api-admin': 'apiAdmin',
-      '@centit/api-auth': 'apiAuth',
-      '@centit/ui-layout': 'uiLayout',
-      '@centit/ui-form': 'uiForm',
-    },
-  },
+    publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
+    css:{ // 这一步配置将css强行内联，否则发布后的组件在使用时不会携带css
+        extract:false
+    }
 }
